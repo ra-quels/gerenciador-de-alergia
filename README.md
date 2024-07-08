@@ -1,3 +1,3 @@
 # sensi-skin
 
-[documentação mais recente](https://github.com/Raquellls/sensi-skin/blob/main/documentacao_versao_03.pdf)
+[documentação mais recente](https://github.com/Raquellls/sensi-skin/blob/main/documentação_Laís_Raquel.pdf)
