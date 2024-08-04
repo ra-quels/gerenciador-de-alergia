@@ -1,3 +1,3 @@
 # sensi-skin
 
-[documentação mais recente](Documentação_Laís_Raquel.docx.pdf)
+[documentação mais recente](documentacao_versao_05)
