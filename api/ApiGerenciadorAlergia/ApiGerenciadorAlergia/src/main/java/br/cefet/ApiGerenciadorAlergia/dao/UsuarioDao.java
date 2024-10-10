@@ -27,8 +27,8 @@ public interface UsuarioDao {
 	public List<Usuario> consultar();
 	
 	@SqlQuery(" select * from usuario "
-			+ " where usuario_id = :id;")
-	public Usuario consultarPorId(@Bind Long id);
+			+ " where usuario_id = :usuario_id;")
+	public Usuario consultarPorId(@Bind Long usuario_id);
 	
 	@SqlQuery("select count(*) > 0 from usuario where email = :email")
     boolean emailExists(@Bind("email") String email);
@@ -38,12 +38,12 @@ public interface UsuarioDao {
 			+ "      email = :email, "
 			+ "      senha = :senha, "
 			+ "      tipo_usuario = :tipoUsuario "
-			+ " where usuario_id = :id;")
+			+ " where usuario_id = :usuario_id;")
 	public int alterar(@BindBean Usuario u);
 	
 	@SqlUpdate(" delete from usuario "
-			+ " where usuario_id = :id;")
-	public int excluir(@Bind Long id);
+			+ " where usuario_id = :usuario_id;")
+	public int excluir(@Bind Long usuario_id);
 
 
 }
