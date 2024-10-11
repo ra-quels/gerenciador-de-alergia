@@ -19,7 +19,7 @@ public interface ComponenteDao {
 	@GetGeneratedKeys
 	@SqlUpdate(" insert into componente (nome) "
 			+ " values (:nome);")
-	public Long inserir(@BindBean Componente a);
+	public Long inserir(@BindBean Componente c);
 	
 	@SqlQuery(" select * from componente;")
 	public List<Componente> consultar();
@@ -32,9 +32,9 @@ public interface ComponenteDao {
     boolean nomeExiste(@Bind("nome") String nome);
 	
 	@SqlUpdate(" update componente "
-			+ "  set nome = :nome, "
+			+ " set nome = :nome "
 			+ " where componente_id = :componente_id;")
-	public int alterar(@BindBean Componente a);
+	public int alterar(@BindBean Componente c);
 	
 	@SqlUpdate(" delete from componente "
 			+ " where componente_id = :componente_id;")

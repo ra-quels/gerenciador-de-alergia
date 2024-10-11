@@ -4,11 +4,13 @@ import java.util.List;
 
 import org.jdbi.v3.core.Jdbi;
 import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
 import br.cefet.ApiGerenciadorAlergia.dao.ProdutoDao;
 import br.cefet.ApiGerenciadorAlergia.model.Produto;
 
+@Service
 public class ProdutoService {
 	private final ProdutoDao produtoDao;
 	

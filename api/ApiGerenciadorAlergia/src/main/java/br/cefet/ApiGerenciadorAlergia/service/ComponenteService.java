@@ -1,14 +1,15 @@
 package br.cefet.ApiGerenciadorAlergia.service;
 
 import java.util.List;
-
 import org.jdbi.v3.core.Jdbi;
 import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
 import br.cefet.ApiGerenciadorAlergia.dao.ComponenteDao;
 import br.cefet.ApiGerenciadorAlergia.model.Componente;
 
+@Service
 public class ComponenteService {
 	private final ComponenteDao componenteDao;
 	
@@ -17,7 +18,7 @@ public class ComponenteService {
 	}
 	
         public Componente inserir(Componente c) {
-            if (c.getComponente_id() != 0) {
+            if (c.getComponente_id() != null) {
                 throw new ResponseStatusException(HttpStatus.NOT_ACCEPTABLE, "Id - informacao ilegal.");
             }
             

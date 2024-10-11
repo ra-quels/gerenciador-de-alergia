@@ -25,7 +25,7 @@ public interface ProdutoDao {
 	public List<Produto> consultar();
 	
 	@SqlQuery(" select * from produto "
-			+ " where produto _id = :produto_id;")
+			+ " where produto_id = :produto_id;")
 	public Produto consultarPorId(@Bind Long produto_id);
 	
 	@SqlQuery("select count(*) > 0 from produto where nome = :nome")

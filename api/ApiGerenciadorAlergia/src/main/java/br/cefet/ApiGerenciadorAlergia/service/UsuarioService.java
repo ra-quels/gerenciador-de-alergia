@@ -1,13 +1,13 @@
 package br.cefet.ApiGerenciadorAlergia.service;
 
-import br.cefet.ApiGerenciadorAlergia.dao.UsuarioDao;
-import br.cefet.ApiGerenciadorAlergia.model.Usuario;
-
 import java.util.List;
 import org.jdbi.v3.core.Jdbi;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
+
+import br.cefet.ApiGerenciadorAlergia.dao.UsuarioDao;
+import br.cefet.ApiGerenciadorAlergia.model.Usuario;
 
 @Service
 public class UsuarioService {
